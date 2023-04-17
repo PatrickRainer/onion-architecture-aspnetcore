@@ -36,7 +36,7 @@ namespace Web
             {
                 var connectionString = Configuration.GetConnectionString("Database");
 
-                builder.UseNpgsql(connectionString);
+                builder.UseSqlServer(connectionString);
             });
 
             services.AddTransient<ExceptionHandlingMiddleware>();
